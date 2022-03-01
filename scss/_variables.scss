@@ -1,0 +1,14 @@
+@import url('../fonts/Norse-Bold.otf');
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap');
+
+@font-face {
+    font-family: Norse;
+    src: url(../fonts/Norse-Bold.otf);
+}
+
+
+$main-font : "Norse";
+$secondary-font: "Indie Flower";
+$third-font: "Amatic SC";
+

@@ -1,0 +1,175 @@
+@import '_variables';
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}body, html {
+    overflow: hidden
+  }
+body{
+    font: $main-font;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white;
+}
+.container{
+    max-width: 100vw;
+    padding: 0;
+    margin: 0;
+}
+.main{
+    height: 100vh;
+    .row{
+        height: 100%;
+        .bg-part{
+            max-width: 700px;
+            padding: 0;
+            background-image: url(../img/bg.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover; 
+            p{
+                width: 100%;
+                margin: 0;
+                padding: 0;
+                background-color: rgba(0, 0, 0, 0.6);
+                backdrop-filter: blur(3px);
+                img{
+                    width: 80px;
+                }
+                span{
+                    padding-left: 20px;
+                    letter-spacing: 15px;
+                    font-size: 3rem;
+                    color: white;
+                    font-family: $main-font;
+                }
+            }
+            img{
+                position: relative;
+                width: 100%;
+                height: inherit;
+            }
+        }
+        .wrapper{
+            height: 100%;
+        }
+        .description{
+            font-family: $third-font;
+            font-size: 2rem;
+            letter-spacing: 2px;
+            color: rgb(124, 3, 3);
+            text-shadow: 0 0 1px  white;
+        }
+        form{
+            label{
+                font-size: 1rem;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+                color: rgb(78, 124, 3);
+                text-shadow: 0 0 1px  white;
+                padding-left: 20px;
+                text-align: left;
+            }
+            input{
+                text-align: center;
+                outline: none;
+                background-color: rgba(250, 235, 215, 0.1);
+                border: none;
+                height: 40px;
+                border-radius: 50px;
+                transition: 0.3s;
+
+                font-family: $secondary-font;
+                font-size: 1.3rem;
+                letter-spacing: 2px;
+                color: rgba(0, 255, 213, 0.2);
+                text-shadow: 0 0 1.5px  white;
+                &:active, &:focus, &:hover{
+                    // border: 1px solid rgb(124, 3, 3);
+                    // background-color: rgba(124, 3, 3, 0.1);
+                    box-shadow: 0 0 8px rgb(21, 132, 151);
+                }
+                
+            }
+            input[type="submit"]{
+                
+                letter-spacing: 5px;
+                &:hover{
+                    color: black;
+                    text-shadow: 0 0 1.5px  rgb(0, 0, 0);
+                    background-color: rgba(0, 255, 213, 0.2);
+                }
+            }
+            p{
+                padding-left: 10px;
+                font-size: 1.2rem;
+                font-family: $secondary-font;
+                // color: rgba(137, 43, 226, 0.589);
+                // color: rgba(226, 43, 43, 0.6);
+                // text-shadow: 0 0 5px rgba(255, 255, 255, 0.1);
+                letter-spacing: 5px;
+                color: rgb(124, 3, 3);
+                text-shadow: 0 0 1px  white;
+                transition: 0.3s;
+                a{
+                    text-decoration: none;
+                    font-weight: bolder;
+                    text-transform: uppercase;
+                    color: rgba(226, 43, 43, 0.6);
+                    text-shadow: 0 0 5px rgba(255, 255, 255, 0.1);
+                    transition: 0.3s;
+                    &:hover{
+                        text-shadow: 0 0 1px  white;
+                        color: rgb(78, 124, 3);
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+@media (max-width:1201px) {
+    .container{
+        // width: 100vw !important;
+        max-width: 100vw;
+        padding: 0;
+        margin: 0;
+    }
+}
+@media (max-width:1471px) {
+    .container{
+        .row .wrapper{
+            padding: 0 !important;
+            padding: 1rem !important;
+            margin:0 !important;
+        }
+    }
+}
+@media (max-width:767px) {
+    body, html{
+        overflow: scroll;
+        overflow-x: hidden;
+    }
+    .container{
+        .row .part-2{
+            text-align: center;
+            padding: 0 !important;
+            margin:0 !important;
+            form{
+                width: 100%;
+                label{
+                    text-align: center;
+                }
+                .row .col-12 .row .col-md-6 {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    input{
+                        width: 80%;
+                    }
+                }
+            }
+        }
+    }
+}
